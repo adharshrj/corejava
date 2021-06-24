@@ -22,10 +22,10 @@ class fountainpen extends pen{
 
 class fpen{
     public static void main(String[] args) {
-        pen p1=new fountainpen();
-        fountainpen.nib();
-        fountainpen.write();
-        fountainpen.refill();
+        fountainpen p1=new fountainpen();
+        p1.nib();
+        p1.write();
+        p1.refill();
         
     }
 }

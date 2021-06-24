@@ -4,27 +4,27 @@ abstract class shape{
 }
 
 class circle extends shape{
-    abstract void display();
+    public void display()
     {
         System.out.println("Circle");
     }
-    void input(){}
+    public void input(){}
 }
 
 class rectangle extends shape{
-    abstract void display();
+    public void display()
     {
         System.out.println("Rectangle");
     }
-    void input(){}
+    public void input(){}
 }
 
 class square extends rectangle{
-    abstract void display();
+    public void display()
     {
         System.out.println("Square is a Rectangle");
     }
-    void input(){}
+    public void input(){}
 }
 
 class abdemo{
