@@ -1,13 +1,27 @@
 package srmb2corejava.WK1.D6;
+import java.util.*;
 
 class randomno extends Thread{
     public void run()
      {
-          try
+        for(int i =0; i<5; i++)
           {
-                double n = Math.random();
-                System.out.println(n);            
+                Random r = new Random();
+                int n = r.nextInt(100);
+                System.out.println(n);    
+                
+                square sq1 = new square(n);
+                sq1.start();
+ 
+                cube cu= new cube(n);
+                cu.start();
+ 
           }
+          try {
+
+            Thread.sleep(1000);
+           
+           } 
          catch(Exception ex)
           {
             ex.printStackTrace();
@@ -15,15 +29,20 @@ class randomno extends Thread{
      }
 }
 
-class square extends randomno{
+class square extends Thread{
+    int x;
+
+    square(int n)
+   
+    {
+        x = n;
+    }
     public void run()
      {
           try
           {
-                if (n%2==0){
-                 double sq = n*n;
+                 int sq = x*x;
                  System.out.println(sq);
-                }
           }
          catch (Exception ex)
           {
@@ -32,15 +51,20 @@ class square extends randomno{
      }
 }
 
-class cube extends randomno{
+class cube extends Thread{
+    int x;
+
+    cube(int n)
+    {
+        x = n;
+    }
     public void run()
      {
           try
           {
-                if (n%2!=0){
-                 double cc = n*n*n;
+                 int cc = x*x*x;
                  System.out.println(cc);
-                }
+                
           }
          catch (Exception ex)
           {
@@ -58,12 +82,7 @@ class multithreading1 {
                randomno rno = new randomno();
                rno.start();
 
-               square sq1 = new square();
-               sq1.start();
-
-               cube cu = new cube();
-               cu.start();
-
+             
               
           }
           catch (Exception ex)
