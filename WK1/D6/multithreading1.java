@@ -4,10 +4,11 @@ import java.util.*;
 class randomno extends Thread{
     public void run()
      {
+        Random r = new Random();
         for(int i =0; i<5; i++)
           {
-                Random r = new Random();
-                int n = r.nextInt(100);
+               
+                int n = r.nextInt();
                 System.out.println(n);    
                 
                 square sq1 = new square(n);
@@ -80,10 +81,7 @@ class multithreading1 {
           try
           {
                randomno rno = new randomno();
-               rno.start();
-
-             
-              
+               rno.start();   
           }
           catch (Exception ex)
           {
