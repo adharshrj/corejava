@@ -21,18 +21,25 @@ public class time {
     public void conversion(){
         System.out.println("Converting");
         switch(type){
-            case 1: sec = val*3600;
-            System.out.println("HR=" +val);
-            System.out.println("SEC=" +mil);
+            case 1: min = (val/60)%60
+                    hr = val/3600;
+                    sec = val%60;
+            System.out.println("HR=" +hr);
+            System.out.println("Min=" +min);
+            System.out.println("Sec=" +sec);
             break;
 
-            case 2: min = val*60;
-            System.out.println("HR=" +val);
-            System.out.println("MIN=" +inr);
+            case 2: min = val%60
+                    hr = val/60;
+                    sec = val*60;
+            System.out.println("HR=" +hr);
+            System.out.println("Min=" +min);
+            System.out.println("Sec=" +sec);
             break;
 
-            case 3:sec = val/3600;
-                   min = val/60;
+            case 3: hr = val
+                   sec = val*3600;
+                   min = val*60;
             System.out.println("HR=" +val);
             System.out.println("MIN=" +min);
             System.out.println("SEC=" +sec);

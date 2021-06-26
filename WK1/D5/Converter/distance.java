@@ -31,7 +31,7 @@ public class distance {
 
             case 2: km = val*1.609344;
             System.out.println("KM" +val);
-            System.out.println("Mile" +inr);
+            System.out.println("Mile" +mil);
             break;
         }
     }
