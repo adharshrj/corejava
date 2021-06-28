@@ -3,7 +3,7 @@ package WK1.D7;
 import java.util.LinkedList;
 import java.util.List;
 
-public class LinkedQueue<E> {
+class LinkedQueue<E> {
 
     private class Node<E> {
       E value;
@@ -69,7 +69,6 @@ public class LinkedQueue<E> {
   public class queue {
 
     public static void main(String[] args) {
-       try {
             // Create a queue of strings.
             LinkedQueue linkedQueue = new LinkedQueue();
             
@@ -88,6 +87,6 @@ public class LinkedQueue<E> {
             
             // Print the size of the queue. Prints 1 as the queue contains one string - B.
             System.out.println(linkedQueue.size());
-      }
+       
     }
 }

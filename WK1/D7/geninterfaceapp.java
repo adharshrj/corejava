@@ -1,4 +1,4 @@
-package srmb2corejava.WK1.D7;
+package WK1.D7;
 
 interface Mathematics<T extends Number> {
     
