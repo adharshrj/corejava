@@ -1,0 +1,1 @@
+file 2 txt contains something in lower case to be converted to UPPER..
