@@ -16,7 +16,7 @@ public class arraylistreplace {
             System.out.println(list);
             // 2 is the index of the element "B".
             //"B" will be replaced by "E"
-            list.set(2, "E");
+            list.set(0, "E");
             System.out.println(list);
             list.set(6, "z");
         }

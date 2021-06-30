@@ -1,21 +1,20 @@
 package WK2.D2.listconcat;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-public class listconcat {
+public class listconcat1 {
     public static void main(String[] args)
     {
         // given list 1
-        List<Integer> list1 = new ArrayList<Integer>();
+        List<Integer> list1 = new LinkedList<Integer>();
         list1.add(1);
         list1.add(2);
         list1.add(3);
         list1.add(4);
         
         // given list 2
-        List<Integer> list2 = new ArrayList<Integer>();
+        List<Integer> list2 = new LinkedList<Integer>();
         list2.add(5);
         list2.add(6);
         list2.add(7);
@@ -23,7 +22,7 @@ public class listconcat {
   
         // creating new empty list
         List<Integer> concatenated_list
-            = new ArrayList<Integer>();
+            = new LinkedList<Integer>();
   
         // using addAll( ) method to concatenate the lists
         concatenated_list.addAll(list1);
@@ -35,4 +34,4 @@ public class listconcat {
                            + concatenated_list);
     }
 }
-}
+

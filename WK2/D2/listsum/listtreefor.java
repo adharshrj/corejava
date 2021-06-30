@@ -10,11 +10,13 @@ public class listtreefor {
         ts.add(61);
         ts.add(87);
         ts.add(39);
-
-        System.out.print("TreeSet: ");
-        for (Integer value : ts)
-            System.out.print(value
-                             + ", ");
+        int Sum=0;
+        System.out.print("TreeSet Sum: ");
+        for (Integer value:ts)
+        {
+            Sum+=value;
+        }
+            System.out.println(Sum);
         System.out.println();
     }
     
