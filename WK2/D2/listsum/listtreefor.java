@@ -1,7 +1,7 @@
 package WK2.D2.listsum;
 import java.util.Iterator;
 import java.util.TreeSet;
-public class listtreesum {
+public class listtreefor {
     public static void main(String[] args)
     {
         TreeSet<Integer>
