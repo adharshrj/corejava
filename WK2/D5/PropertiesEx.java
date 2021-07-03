@@ -15,6 +15,7 @@ public class PropertiesEx {
         q.setProperty("name", "adharsh");
         q.setProperty("city", "chennai");
         q.store(new FileWriter("name.properties"),"properties");
+        System.out.println("Properties are stored");
 
        
     }
