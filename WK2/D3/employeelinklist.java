@@ -17,14 +17,11 @@ class Employee{
 }
 public class employeelinklist {
     public static void main(String[] args) {
-        List<Integer,Employee>ls = new LinkedList<Integer,Employee>();
-        ls.put(1, new Employee(125,"Ram","Manager"));
-        ls.put(2, new Employee(427,"Laxman","CEO"));
-        ls.put(3,new Employee(552,"Sita","GM"));
-        Set<List<Integer,Employee>> s = ls.entrySet();
-        for(List<Integer,Employee> le:s)
-        {
-            System.out.println(le.getKey()+" "+le.getValue());
-        }
+        LinkedList<Employee>ls = new LinkedList<Employee>();
+        ls.add(new Employee(125,"Ram","Manager"));
+        ls.add(new Employee(427,"Laxman","CEO"));
+        ls.add(new Employee(552,"Sita","GM"));
+        System.out.println(ls);
+        
     }
 }
