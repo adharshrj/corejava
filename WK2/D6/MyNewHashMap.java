@@ -27,6 +27,7 @@ public class MyNewHashMap {
         Iterator<MyOwnClass> itr = hs.iterator();
      
         while (itr.hasNext()) { 
+           itr.next();
            System.out.println(hs);
         } 
 
