@@ -1,14 +1,14 @@
-package WK3.D2;
+package WK3.D4;
 import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
 
-class CalcFrame1 extends JFrame implements ActionListener {
+class SwingCalc extends JFrame implements ActionListener {
     static JFrame f;
     static JTextField l;
     String s0, s1, s2;
 
-    CalcFrame1() {
+    SwingCalc() {
         s0 = s1 = s2 = "";
     }
 
@@ -23,7 +23,7 @@ class CalcFrame1 extends JFrame implements ActionListener {
             System.err.println(e.getMessage());
         }
 
-        CalcFrame1 c = new CalcFrame1();
+        SwingCalc c = new SwingCalc();
 
         l = new JTextField(16);
 

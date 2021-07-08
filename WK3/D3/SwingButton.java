@@ -15,7 +15,7 @@ public class SwingButton {
             int clicked = 0;  
             public void actionPerformed(ActionEvent e){  
                     clicked++;
-                    tf.setText(count(clicked));
+                    tf.setText(Integer.toString(clicked));
                 }  
             });  
             f.add(b);f.add(tf);  

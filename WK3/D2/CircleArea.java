@@ -24,7 +24,7 @@ public class CircleArea extends Frame implements ActionListener {
     }
     public void actionPerformed(ActionEvent ae){
         String s=ae.getActionCommand();
-        if(s.equals("RADIUS")){
+        if(s.equals("AREA")){
             double r=Double.parseDouble(tf1.getText());
             tf2.setText(Double.toString(3.14*r*r));
         }else{
