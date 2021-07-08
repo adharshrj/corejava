@@ -3,64 +3,115 @@ package WK3.D2;
 import java.awt.*;
 import java.awt.event.*;
 
-public class CalcFrame  extends Frame implements ActionListener{
-    Button b1,b2,b3,b4,b5;
-    Label l1,l2,l3;
-    TextField tf1,tf2,tf3;
 
+public class CalcFrame  extends Frame implements ActionListener{
+    Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16;
+    TextField tf1,tf2,tf3;
+    Label l;
     CalcFrame(){
         super("Calc Frame");
-        b1=new Button("ADD");
-        b2=new Button("CLEAR");
-        b3=new Button("SUBTRACT");
-        b4=new Button("MULTIPLY");
-        b5=new Button("DIVIDE");
+        b1=new Button("1");
+        b2=new Button("2");
+        b3=new Button("3");
+        b4=new Button("4");
+        b5=new Button("5");
+        b6=new Button("6");
+        b7=new Button("7");
+        b8=new Button("8");
+        b9=new Button("9");
+        b10=new Button("0");
+        b11=new Button("+");
+        b12=new Button("C");
+        b13=new Button("-");
+        b14=new Button("X");
+        b15=new Button("/");
+        b16=new Button("=");
         b1.addActionListener(this);
         b2.addActionListener(this);
         b3.addActionListener(this);
         b4.addActionListener(this);
         b5.addActionListener(this);
+        b6.addActionListener(this);
+        b7.addActionListener(this);
+        b8.addActionListener(this);
+        b9.addActionListener(this);
+        b10.addActionListener(this);
+        b11.addActionListener(this);
+        b12.addActionListener(this);
+        b13.addActionListener(this);
+        b14.addActionListener(this);
+        b15.addActionListener(this);
 
-        l1=new Label("Enter First Number");
-        l2=new Label("Enter Second Number");
-        l3=new Label("Result");
-
+        l=new Label("Calc");
         tf1=new TextField();
         tf2=new TextField();
         tf3=new TextField();
 
-        setLayout(new GridLayout(6,2));
-        add(l1);add(tf1);
-        add(l2);add(tf2);
-        add(l3);add(tf3);
-        add(b1);add(b3);
-        add(b4);add(b5);
-        add(b2);
+        setLayout(new GridLayout(5,4));
+        add(l);add(b12);add(b10);add(b16);
+        add(b7);add(b8);add(b9);add(b14);
+        add(b4);add(b5);add(b6);add(b13);
+        add(b1);add(b2);add(b3);add(b11);
+        add(tf1);add(tf2);add(tf3);
     }
     public void actionPerformed(ActionEvent ae){
         String s=ae.getActionCommand();
-        if(s.equals("ADD")){
-            int n1=Integer.parseInt(tf1.getText());
-            int n2=Integer.parseInt(tf2.getText());
-            tf3.setText(Integer.toString(n1+n2));
-        }else if(s.equals("SUBTRACT")){
-            int n1=Integer.parseInt(tf1.getText());
-            int n2=Integer.parseInt(tf2.getText());
-            tf3.setText(Integer.toString(n1-n2));
+        if(s.equals("1")){
+            int n=Integer.parseInt(tf.getText());
+            tf.setText(Integer.toString(n));
         }
-        else if(s.equals("MULTIPLY")){
-            int n1=Integer.parseInt(tf1.getText());
-            int n2=Integer.parseInt(tf2.getText());
-            tf3.setText(Integer.toString(n1*n2));
+        else if(s.equals("2")){
+            int n=Integer.parseInt(tf.getText());
+            tf.setText(Integer.toString(n));
         }
-        else if(s.equals("DIVIDE")){
-            int n1=Integer.parseInt(tf1.getText());
-            int n2=Integer.parseInt(tf2.getText());
-            tf3.setText(Integer.toString(n1/n2));
+        else if(s.equals("3")){
+            int n=Integer.parseInt(tf.getText());
+            tf.setText(Integer.toString(n));
+        }
+        else if(s.equals("4")){
+            int n=Integer.parseInt(tf.getText());
+            tf.setText(Integer.toString(n));
+        }
+        else if(s.equals("5")){
+            int n=Integer.parseInt(tf.getText());
+            tf.setText(Integer.toString(n));
+        }
+        else if(s.equals("6")){
+            int n=Integer.parseInt(tf.getText());
+            tf.setText(Integer.toString(n));
+        }
+        else if(s.equals("7")){
+            int n=Integer.parseInt(tf.getText());
+            tf.setText(Integer.toString(n));
+        }
+        else if(s.equals("8")){
+            int n=Integer.parseInt(tf.getText());
+            tf.setText(Integer.toString(n));
+        }
+        else if(s.equals("9")){
+            int n=Integer.parseInt(tf.getText());
+            tf.setText(Integer.toString(n));
+        }
+        else if(s.equals("0")){
+            int n=Integer.parseInt(tf.getText());
+            tf.setText(Integer.toString(n));
+        }else if(s.equals("+")){
+            int n=Integer.parseInt(tf.getText());
+            tf.setText(Integer.toString(n));
+        }
+        else if(s.equals("-")){
+            int n=Integer.parseInt(tf.getText());
+            tf.setText(Integer.toString(n));
+        }
+        else if(s.equals("X")){
+            int n=Integer.parseInt(tf.getText());
+            tf.setText(Integer.toString(n));
+        }
+        else if(s.equals("/")){
+            int n=Integer.parseInt(tf.getText());
+            tf.setText(Integer.toString(n));
         }else{
-            tf1.setText("");
-            tf2.setText("");
-            tf3.setText("");
+            tf.setText("");
             
         }
     }
