@@ -5,7 +5,7 @@ import java.awt.event.*;
 
 
 public class CalcFrame  extends Frame implements ActionListener{
-    Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16;
+    Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,b17;
     TextField tf;
     Label l;
     String s0, s1, s2;
@@ -29,6 +29,7 @@ public class CalcFrame  extends Frame implements ActionListener{
         b14=new Button("*");
         b15=new Button("/");
         b16=new Button("=");
+        b17=new Button(".");
         b1.addActionListener(this);
         b2.addActionListener(this);
         b3.addActionListener(this);
@@ -44,17 +45,18 @@ public class CalcFrame  extends Frame implements ActionListener{
         b13.addActionListener(this);
         b14.addActionListener(this);
         b15.addActionListener(this);
+        b16.addActionListener(this);
+        b17.addActionListener(this);
 
         l=new Label("Calc");
         tf=new TextField();
         
 
-        setLayout(new GridLayout(5,4));
-        add(l);add(b12);add(b10);add(b16);
+        setLayout(new GridLayout(4,4));
+        add(tf);add(b12);add(b10);add(b16);
         add(b7);add(b8);add(b9);add(b14);
         add(b4);add(b5);add(b6);add(b13);
         add(b1);add(b2);add(b3);add(b11);
-        add(tf);
     }
     public void actionPerformed(ActionEvent e) {
         String s = e.getActionCommand();
@@ -64,11 +66,11 @@ public class CalcFrame  extends Frame implements ActionListener{
                 s2 = s2 + s;
             else
                 s0 = s0 + s;
-            l.setText(s0 + s1 + s2);
+            tf.setText(s0 + s1 + s2);
         } else if (s.charAt(0) == 'C') {
             s0 = s1 = s2 = "";
 
-            l.setText(s0 + s1 + s2);
+            tf.setText(s0 + s1 + s2);
         } else if (s.charAt(0) == '=') {
 
             double te;
@@ -82,7 +84,7 @@ public class CalcFrame  extends Frame implements ActionListener{
             else
                 te = (Double.parseDouble(s0) * Double.parseDouble(s2));
 
-            l.setText(s0 + s1 + s2 + "=" + te);
+            tf.setText(s0 + s1 + s2 + "=" + te);
 
             s0 = Double.toString(te);
 
@@ -108,7 +110,7 @@ public class CalcFrame  extends Frame implements ActionListener{
 
                 s2 = "";
             }
-            l.setText(s0 + s1 + s2);
+            tf.setText(s0 + s1 + s2);
         }
     }
 
