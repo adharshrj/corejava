@@ -8,20 +8,18 @@ public class SwingTemp extends JFrame implements ActionListener {
     JTextField jt = new JTextField();
     JRadioButton jrb1 = new JRadioButton();
     JRadioButton jrb2 = new JRadioButton();
-    JButton jb = new JButton();
     ButtonGroup bg = new ButtonGroup();
     JLabel jl = new JLabel();
-    String s1;
+    JLabel jrs = new JLabel();
+    
     
     SwingTemp(){
-        s1 = "";
+        
         c.setLayout(null);
         
         jrb1.setBounds(120, 130, 120, 50);
         jrb2.setBounds(250, 130, 80, 50);
         
-        jb = new JButton("Convert");
-        jb.setBounds(85, 190, 180, 30);
         
         jt = new JTextField(16);
         jt.setBounds(50,50,250,50);
@@ -29,6 +27,8 @@ public class SwingTemp extends JFrame implements ActionListener {
         
         jl = new JLabel("Select Unit");
         jl.setBounds(20, 130, 150, 50);
+        jrs = new JLabel("Result");
+        jrs.setBounds(85, 190, 180, 30);
 
         jrb1.setText("Celcius");
         jrb2.setText("Farenheit");
@@ -36,28 +36,32 @@ public class SwingTemp extends JFrame implements ActionListener {
         c.add(jt);
         c.add(jrb1);
         c.add(jrb2);
-        c.add(jb);
+        
         c.add(jl);
+        c.add(jrs);
 
         bg.add(jrb1);
         bg.add(jrb2);
-
-        // jb.addActionListener(new ActionListener() { 
-        //     public void actionPerformed(ActionEvent e){
-        //         String s = "";
-        //         if (jrb1.isSelected()) {
-        //             if (!s1.equals(""))
-        //              s1 = (Double.parseDouble(s)-32.0)/1.8;
-        //             jt.setText(s1);
-
-        //         }else{
-        //         if (!s1.equals(""))
-        //              s1 = (Double.parseDouble(s)*32.0)+1.8;
-        //             jt.setText(s1);
-        //         }
-        //     }
-        // }
-    } 
+        jrb1.addActionListener(this);
+        jrb2.addActionListener(this);
+    }
+         public void actionPerformed(ActionEvent e)
+        {
+            if(e.getSource()== jrb2)
+            {
+                double a= Double.parseDouble(jt.getText());
+                double f = (a*1.8)+32;
+                jrs.setText("Celcius to Farenheit " + f +"'F");
+            }
+            
+            if(e.getSource()== jrb1)
+            {
+                double a= Double.parseDouble(jt.getText());
+                double c = (a-32)*1.8;
+                jrs.setText("Farenheit to Celcius: " + c+ "'C");
+            }
+        }
+     
     public static void main(String[] a)
     {
         SwingTemp st = new SwingTemp();
