@@ -6,3 +6,6 @@ Weekend activity can be found at WK1/D7
 
 **WEEK 2**
 Week 2 activities can be found at WK2
+
+**WEEK 3**
+Week 3 activities can be found day wise at WK3
