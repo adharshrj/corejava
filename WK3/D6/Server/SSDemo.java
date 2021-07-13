@@ -3,7 +3,7 @@ package WK3.D6.Server;
 import java.net.*;
 import java.io.*;
 import java.util.*;
-public class SSDemo {
+class SSDemo {
     public static void main(String a[]){
         try{
             int port = Integer.parseInt(a[0]);

@@ -37,7 +37,7 @@ public class SeDemo{
             Emp e = (Emp)ois.readObject();
             ois.close();
             System.out.println("After Retreiving Object: " +e);
-        }catch(IOException ie){System.out.println(ie);}
+        }catch(Exception e){System.out.println(e);}
     }
 }
 

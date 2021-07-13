@@ -4,7 +4,7 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.*;
 
-public class DatagramReceiver {
+public class DRDemo {
     public final static int BUFSIZE = 20;
     public static void main(String a[]){
        try{

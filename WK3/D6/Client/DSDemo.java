@@ -2,7 +2,7 @@ package WK3.D6.Client;
 
 import java.net.*;
 
-public class DatagramSender {
+public class DSDemo {
     public static void main(String a[]){
         try{
             int port=Integer.parseInt(a[1]);
