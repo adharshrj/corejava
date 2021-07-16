@@ -1,6 +1,6 @@
-package WK4.D3;
+package WK4.D4;
 import java.sql.*;
-public class SDisplay3 {
+public class SDisplay4 {
     public static void main(String a[]){
         Connection c=null;
         try{
