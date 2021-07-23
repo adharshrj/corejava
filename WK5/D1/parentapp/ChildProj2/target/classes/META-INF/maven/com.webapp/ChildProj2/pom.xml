@@ -8,11 +8,17 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>com.webapp</groupId>
-  <artifactId>webmodule</artifactId>
+  <artifactId>ChildProj2</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
-  <name>webmodule Maven Webapp</name>
+  <name>ChildProj2</name>
   <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+  </properties>
+
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -20,18 +26,5 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-	  <groupId>com.webapp</groupId>
-	  <artifactId>ChildProj2</artifactId>
-	  <version>0.0.1-SNAPSHOT</version>
-	</dependency>
-	<dependency>
-	    <groupId>com.webapp</groupId>
-    	<artifactId>ChildProj1</artifactId>
-    	<version>0.0.1-SNAPSHOT</version>
-    </dependency>
   </dependencies>
-  <build>
-    <finalName>webmodule</finalName>
-  </build>
 </project>
